@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 1142
+  Height = 300
+  Top = 325
+  Width = 569
+  Caption = 'Сумма, разность и произведение'
+  ClientHeight = 300
+  ClientWidth = 569
+  DesignTimePPI = 120
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 20
+    Height = 20
+    Top = 20
+    Width = 55
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    Caption = 'Число а'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    Left = 20
+    Height = 20
+    Top = 60
+    Width = 56
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    Caption = 'Число b'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 95
+    Height = 28
+    Top = 20
+    Width = 93
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    TabOrder = 0
+    Text = '24'
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 96
+    Height = 28
+    Top = 68
+    Width = 92
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    TabOrder = 1
+    Text = '5'
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    Left = 216
+    Height = 56
+    Top = 112
+    Width = 142
+    Anchors = []
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 60
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Result: TMemo
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 32
+    Height = 90
+    Top = 184
+    Width = 512
+    Anchors = []
+    BorderSpacing.Right = 60
+    BorderSpacing.Bottom = 70
+    Lines.Strings = (
+      'Result'
+    )
+    TabOrder = 3
+  end
+end
