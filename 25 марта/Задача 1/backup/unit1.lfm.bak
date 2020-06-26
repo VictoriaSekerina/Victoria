@@ -1,0 +1,140 @@
+object Form1: TForm1
+  Tag = 2
+  Left = 1177
+  Height = 336
+  Top = 329
+  Width = 689
+  Caption = 'Сумма, разность и произведение двух чисел'
+  ClientHeight = 311
+  ClientWidth = 689
+  DesignTimePPI = 120
+  Menu = MainMenu
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label_b
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 60
+    Top = 158
+    Width = 158
+    BorderSpacing.Top = 81
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label_a: TLabel
+    Tag = 2
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 0
+    Height = 20
+    Top = 12
+    Width = 55
+    BorderSpacing.Top = 12
+    Caption = 'Число а'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_b: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label_a
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 20
+    Top = 57
+    Width = 56
+    BorderSpacing.Top = 25
+    Caption = 'Число b'
+    ParentColor = False
+    ParentFont = False
+  end
+  object a_Edit1: TEdit
+    AnchorSideLeft.Control = Label_b
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 81
+    Height = 28
+    Top = 12
+    Width = 136
+    BorderSpacing.Left = 25
+    BorderSpacing.Top = 12
+    OnChange = a_Edit1Change
+    ParentFont = False
+    TabOrder = 1
+    Text = '20'
+  end
+  object b_Edit2: TEdit
+    AnchorSideLeft.Control = Label_b
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = a_Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 81
+    Height = 28
+    Top = 59
+    Width = 132
+    BorderSpacing.Left = 25
+    BorderSpacing.Top = 19
+    ParentFont = False
+    TabOrder = 2
+    Text = '6'
+  end
+  object Memo1: TMemo
+    AnchorSideLeft.Control = Button1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 196
+    Height = 60
+    Top = 162
+    Width = 345
+    BorderSpacing.Left = 38
+    BorderSpacing.Top = 162
+    Lines.Strings = (
+      'raznosti_Memo'
+      '1'
+    )
+    OnChange = Memo1Change
+    ParentFont = False
+    TabOrder = 3
+  end
+  object MainMenu: TMainMenu
+    left = 320
+    top = 24
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      OnClick = MenuItem1Click
+      object MenuItem2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Выход'
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 424
+    top = 24
+  end
+  object SaveDialog1: TSaveDialog
+    FileName = 'C:\Users\днс\Desktop\Новая папка\ор'
+    InitialDir = 'C:\Users\днс\Desktop\Новая папка\'
+    left = 544
+    top = 24
+  end
+end

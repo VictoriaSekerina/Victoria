@@ -1,0 +1,105 @@
+object Form_s: TForm_s
+  Left = 999
+  Height = 434
+  Top = 244
+  Width = 540
+  Caption = 'Площадь круга'
+  ClientHeight = 409
+  ClientWidth = 540
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 45
+    Top = 104
+    Width = 119
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label_r: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 12
+    Height = 20
+    Top = 19
+    Width = 44
+    BorderSpacing.Left = 12
+    BorderSpacing.Top = 19
+    Caption = 'Длина'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit_d: TEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    Left = 96
+    Height = 28
+    Top = 19
+    Width = 98
+    ParentFont = False
+    TabOrder = 1
+    Text = '3'
+  end
+  object Memo_result: TMemo
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    Left = 176
+    Height = 48
+    Top = 120
+    Width = 136
+    Lines.Strings = (
+      'Memo_result'
+    )
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Label_result: TLabel
+    AnchorSideLeft.Side = asrBottom
+    Left = 184
+    Height = 20
+    Top = 88
+    Width = 105
+    Caption = 'Площадь круга'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    left = 32
+    top = 208
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Запустить'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem6Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 136
+    top = 208
+  end
+  object SaveDialog1: TSaveDialog
+    left = 240
+    top = 208
+  end
+end
