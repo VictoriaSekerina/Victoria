@@ -1,0 +1,157 @@
+object Form1: TForm1
+  Left = 540
+  Height = 448
+  Top = 333
+  Width = 692
+  Caption = 'Сумма, разность и произведение'
+  ClientHeight = 423
+  ClientWidth = 692
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 20
+    Height = 20
+    Top = 20
+    Width = 55
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    Caption = 'Число а'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edit_b
+    AnchorSideTop.Side = asrCenter
+    Left = 20
+    Height = 20
+    Top = 72
+    Width = 56
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 25
+    Caption = 'Число b'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit_a: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 105
+    Height = 28
+    Top = 20
+    Width = 111
+    BorderSpacing.Left = 30
+    BorderSpacing.Top = 20
+    ParentFont = False
+    TabOrder = 0
+    Text = '50'
+  end
+  object Edit_b: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit_a
+    AnchorSideTop.Side = asrBottom
+    Left = 105
+    Height = 28
+    Top = 68
+    Width = 112
+    BorderSpacing.Left = 29
+    BorderSpacing.Top = 20
+    ParentFont = False
+    TabOrder = 1
+    Text = '160'
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrCenter
+    Left = 239
+    Height = 60
+    Top = 120
+    Width = 214
+    BorderSpacing.Left = 200
+    BorderSpacing.Top = 120
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Result: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 19
+    Height = 173
+    Top = 230
+    Width = 654
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 19
+    BorderSpacing.Top = 50
+    BorderSpacing.Right = 19
+    BorderSpacing.Bottom = 20
+    Lines.Strings = (
+      'Result'
+    )
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrBottom
+    Left = 25
+    Height = 20
+    Top = 200
+    Width = 224
+    BorderSpacing.Left = 25
+    BorderSpacing.Top = 20
+    BorderSpacing.Bottom = 1
+    Caption = 'Сумма, разность, произведение'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    left = 376
+    top = 16
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Свойства'
+      OnClick = MenuItem6Click
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem7Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 456
+    top = 16
+  end
+  object SaveDialog1: TSaveDialog
+    left = 536
+    top = 16
+  end
+end

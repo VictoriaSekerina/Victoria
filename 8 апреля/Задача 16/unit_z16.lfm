@@ -1,0 +1,126 @@
+object Form_s: TForm_s
+  Left = 773
+  Height = 496
+  Top = 194
+  Width = 742
+  Caption = 'Площадь круга'
+  ClientHeight = 471
+  ClientWidth = 742
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 250
+    Height = 56
+    Top = 100
+    Width = 230
+    BorderSpacing.Left = 250
+    BorderSpacing.Top = 100
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label_duga: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 20
+    Top = 16
+    Width = 131
+    Anchors = []
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
+    Caption = 'Длина окружности'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit_d: TEdit
+    AnchorSideLeft.Control = Label_duga
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    Left = 170
+    Height = 28
+    Top = 16
+    Width = 100
+    Anchors = [akLeft]
+    BorderSpacing.Left = 23
+    ParentFont = False
+    TabOrder = 1
+    Text = '1,57'
+  end
+  object Result: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button1
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 19
+    Height = 252
+    Top = 200
+    Width = 704
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 19
+    BorderSpacing.Top = 100
+    BorderSpacing.Right = 19
+    BorderSpacing.Bottom = 19
+    Lines.Strings = (
+      'Memo_result'
+    )
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Label_result: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrBottom
+    Left = 19
+    Height = 20
+    Top = 171
+    Width = 122
+    BorderSpacing.Left = 19
+    BorderSpacing.Top = 15
+    Caption = 'Площадь сектора'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    left = 472
+    top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Сохранить отчет'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Запустить'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem6Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 576
+    top = 8
+  end
+  object SaveDialog1: TSaveDialog
+    left = 672
+    top = 8
+  end
+end
